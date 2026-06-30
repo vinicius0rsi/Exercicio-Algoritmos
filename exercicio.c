@@ -19,8 +19,7 @@ int main () {
 
 char nome_alunos[alunos][tam];
 float matriz_nota[alunos][notas];
-int num_alunos = 1;
-float media_maior = 0;
+float media_maior = -1;
 int save = 0;
 
 float media[alunos];
@@ -53,7 +52,6 @@ for (int i = 0; i<alunos; i++) {
     }
 } while (!validas);
     
-
     system("cls");
 
     media[i] = calcular_media(matriz_nota[i], notas);
