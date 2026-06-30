@@ -66,8 +66,6 @@ for (int i = 0; i<alunos; i++) {
     } else {
         strcpy(situacao[i], "Aprovado");
     }
-
-    num_alunos++;
 }
 
 printf("%-12s %6s %6s %6s %8s   %s\n",
