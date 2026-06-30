@@ -5,6 +5,14 @@
 #define notas 3
 #define alunos 5
 
+float calcular_media(float n[], int qtd) {
+    float soma = 0;
+    for (int i = 0; i < qtd; i++) {
+        soma += n[i];
+    }
+    return soma / qtd;
+}
+
 int main () {
 
 //variaveis
@@ -48,10 +56,7 @@ for (int i = 0; i<alunos; i++) {
 
     system("cls");
 
-    for (int j = 0; j<notas; j++) {
-        media[i] += matriz_nota[i][j];
-    }
-    media[i] /= notas;
+    media[i] = calcular_media(matriz_nota[i], notas);
 
     if (media[i]>media_maior) {
         media_maior = media[i];
@@ -67,12 +72,14 @@ for (int i = 0; i<alunos; i++) {
     num_alunos++;
 }
 
-printf("ALUNO        N1     N2     N3     MEDIA      SITUACAO\n");
+printf("%-12s %6s %6s %6s %8s   %s\n",
+    "ALUNO", "N1", "N2", "N3", "MEDIA", "SITUACAO");
 for (int i = 0; i<alunos; i++) {
-    printf("%-12s %.1f    %.1f    %.1f    %.1f       %s\n", nome_alunos[i], matriz_nota[i][0], matriz_nota[i][1], matriz_nota[i][2], media[i], situacao[i]);
+    printf("%-12s %6.1f %6.1f %6.1f %8.1f   %s\n",
+           nome_alunos[i], matriz_nota[i][0], matriz_nota[i][1], matriz_nota[i][2], media[i], situacao[i]);
 }
 
-printf("\n\nAluno com maior média: (%.1f)  -  %s", media[save], nome_alunos[save]);
+printf("\nAluno com maior media: %s (%.1f)\n", nome_alunos[save], media[save]);
 
 
     return 0;
