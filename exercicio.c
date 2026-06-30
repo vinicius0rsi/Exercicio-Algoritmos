@@ -40,7 +40,7 @@ for (int i = 0; i<alunos; i++) {
     
     int validas = 0;
     do {
-    printf("Digite as notas de %s: ", nome_alunos[i]);
+    printf("Digite as %d notas de %s: ", notas, nome_alunos[i]);
     scanf("%f %f %f", &matriz_nota[i][0], &matriz_nota[i][1], &matriz_nota[i][2]);
     validas = 1;
     for (int j = 0; j < notas; j++) {
