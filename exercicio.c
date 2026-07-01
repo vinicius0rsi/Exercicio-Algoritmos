@@ -77,6 +77,9 @@ for (int i = 0; i<alunos; i++) {
 
 printf("\nAluno com maior media: %s (%.1f)\n", nome_alunos[save], media[save]);
 
+printf("\nPressione ENTER para sair...");
+    getchar();
+    getchar();
 
     return 0;
 }
