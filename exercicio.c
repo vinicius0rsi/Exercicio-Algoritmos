@@ -31,7 +31,7 @@ char situacao[alunos][tam];
 
 //codigo
 
-printf("Calculadora de Médias\n");
+printf("Calculadora de Medias\n");
 
 for (int i = 0; i<alunos; i++) {
 
